@@ -63,41 +63,6 @@ stage-by-stage for review and version control.
 5. **Grounded explanation** — four-tier KG path fallback feeds a two-sentence
    prompt to the LLM; ranking stays fixed by LightGCN scores.
 
-## Data & checkpoints
-
-The preprocessed data bundle (`xkgrank_save.zip`: id maps, train/valid/test
-CSVs, `edge_index.pt`, `kg_graph.pkl`) and the trained checkpoints
-(`lightgcn_best.pt`, `kg_projector.pt`, LoRA adapters) are **too large for git**
-and are hosted on Google Drive:
-
-**Google Drive (data + checkpoints):** `<PASTE_YOUR_DRIVE_SHARE_LINK_HERE>`
-
-See the "How to upload to Google Drive" section below to create this link.
-
-## Running
-
-The project was developed on **Google Colab Pro** with a single NVIDIA A100 GPU.
-
-1. Open `notebook/FINAL_PROJECT_CODE.ipynb` in Colab.
-2. Run the first cell — it mounts Google Drive and prompts you to upload
-   `xkgrank_save.zip` (or reads it from your Drive).
-3. Run the cells in order (Stage 0 → Stage 10). End-to-end training across all
-   stages takes roughly three hours.
-
-Local runs are possible with the dependencies in `requirements.txt`, but a CUDA
-GPU is strongly recommended for the LightGCN, node2vec, and LLM stages.
-
-## How to upload data/checkpoints to Google Drive
-
-1. Go to <https://drive.google.com> and sign in.
-2. Click **+ New → New folder**, name it `xkgrank_release`.
-3. Open the folder, click **+ New → File upload**, and upload `xkgrank_save.zip`
-   and your checkpoint files.
-4. Right-click the folder → **Share → Share**.
-5. Under *General access*, switch from "Restricted" to
-   **"Anyone with the link"**, set the role to **Viewer**, then **Copy link**.
-6. Paste that link into the "Data & checkpoints" section above (replace the
-   `<PASTE_YOUR_DRIVE_SHARE_LINK_HERE>` placeholder) and commit the change.
 
 ## Citation
 
