@@ -1,0 +1,12 @@
+venv/
+ml-1m/
+ml-1m.zip
+lightgcn_data/
+xkgrank_save/
+xkgrank_save.zip
+xkgrank_output/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+*.pt
+*.pkl
